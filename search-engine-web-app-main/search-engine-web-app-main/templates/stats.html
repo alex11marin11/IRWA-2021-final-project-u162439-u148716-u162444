@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block page_title %}{{ page_title }}{% endblock %}
+{% block content %}
+    Quick sample...
+    <hr>
+	
+	<div> <h3> Query has {{num_words_sq}} words</h3> </div>
+	
+    {% for doc in clicks_data %}
+        <div class="pb-3">
+            <div class="">
+                <span class="text-dark"> ({{ doc.counter }} visits) </span> — id: {{ doc.doc_id }} — {{ doc.description }}
+            </div>
+        </div>
+        <hr>
+    {% endfor %}
+{% endblock %}
